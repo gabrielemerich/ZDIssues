@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="lib/vue.min.js"></script>
+
+  <title>ZD Issue</title>
+</head>
+<body>
+  <div id="app">
+    <div class="ui segment basic centered grid">
+      <button id="report" v-if="!isUpdate" v-bind:class="{ 'loading': isLoading }" :disabled="isLoading" class="ui labeled icon positive button" v-on:click="saveTicket">
+        <i class="bug icon"></i>
+        Report Ticket
+      </button>
+      <button id="update" v-if="isUpdate" class="ui labeled icon blue button" onclick="saveTicket()">
+        <i class="refresh icon"></i>
+        Update Ticket
+      </button>
+      <div class="row">
+        <a class="ui label">
+          <i class="time icon"></i>
+          Updated at 25/02/2021
+        </a>
+      </div>
+    </div>
+</div>
+</body>
+<script src="app.js"></script>
+
+</html>

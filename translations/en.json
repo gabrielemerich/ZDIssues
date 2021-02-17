@@ -1,0 +1,14 @@
+{
+  "app": {
+    "name": "Bookmarks",
+    "short_description": "Quickly see your products",
+    "long_description": "Access bookmarked tickets from our iPad & iPhone app",
+    "installation_instructions": "Simply click the install button",
+    "parameters": {
+      "disable_conflicts_prevention": {
+        "label": "Remove conflict prevention warnings",
+        "helpText": "Check this to not show warnings when a conflict happens"
+      }
+    }
+  }
+}
