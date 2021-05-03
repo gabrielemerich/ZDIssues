@@ -2,13 +2,13 @@ var client = ZAFClient.init();
 
 const config = {
   baseURL: 'https://api.github.com/repos/gabrielemerich/WebSiteSC/',
-  headers: {'Authorization': 'token 78c6ed35b87d9426b01bf6feb815b612f886ae7a'}
+  headers: {'Authorization': 'null'}
 };
 
 const instance = axios.create({
   baseURL: 'https://emerichhelp.zendesk.com/api/v2/',
  
-  headers: {'Authorization': 'Basic Z2FicmllbC1jb21wcmFzQGxpdmUuY29tOmdnMTIzMzIx'}
+  headers: {'Authorization': 'null'}
 });
 
 function optionsRequest(typeRequest,url, data = null){
@@ -65,7 +65,7 @@ new Vue({
                 type: 'PUT', 
                 httpCompleteResponse: true,
                 data: JSON.stringify({ticket: {external_id: res.responseJSON.number}}),
-                headers: {'Authorization': 'Basic Z2FicmllbC1jb21wcmFzQGxpdmUuY29tOmdnMTIzMzIx'},
+                headers: {'Authorization': 'null'},
                 contentType: 'application/json'
             })
 
@@ -111,7 +111,7 @@ client.context().then(async function(context) {
           type: 'PUT', 
           httpCompleteResponse: true,
           data: JSON.stringify({ticket: {external_id: issueCreated.responseJSON.number}}),
-          headers: {'Authorization': 'Basic Z2FicmllbC1jb21wcmFzQGxpdmUuY29tOmdnMTIzMzIx'},
+          headers: {'Authorization': 'null'},
           contentType: 'application/json'
       })
     }
